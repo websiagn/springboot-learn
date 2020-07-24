@@ -1,4 +1,4 @@
-package com.example.springbootlearn.conf;
+package com.example.springbootlearn.config;
 
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
