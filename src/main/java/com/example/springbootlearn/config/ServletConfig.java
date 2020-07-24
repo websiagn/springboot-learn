@@ -1,10 +1,12 @@
 package com.example.springbootlearn.config;
 
 import com.example.springbootlearn.filter.MyFilter;
+import com.example.springbootlearn.listener.MyListener;
 import com.example.springbootlearn.servlet.MyServlet;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -46,5 +48,14 @@ public class ServletConfig{
         registrationBean.setFilter(new MyFilter());
         registrationBean.setUrlPatterns(Arrays.asList("/hello","/myServlet"));
         return registrationBean;
+    }
+
+    /**
+     * Servlet三大组件__listener
+     */
+    @Bean
+    public ServletListenerRegistrationBean myListener(){
+        ServletListenerRegistrationBean<MyListener> listenerRegistrationBean = new ServletListenerRegistrationBean<>(new MyListener());
+        return listenerRegistrationBean;
     }
 }
