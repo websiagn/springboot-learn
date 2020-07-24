@@ -14,7 +14,7 @@ import java.util.Map;
 public class UserController {
     @RequestMapping("/user")
     public User getUser() {
-        return new User(1, "陈明", "123456");
+        return new User(1, null, "123456");
     }
 
     @RequestMapping("/list")
