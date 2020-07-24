@@ -30,7 +30,7 @@ public class UserController {
     @RequestMapping("/map")
     public Map<String, Object> getUserMap() {
         Map<String, Object> map = new HashMap<>();
-        User user2 = new User(2, "陈明", "123456");
+        User user2 = new User(2, "陈明", null);
         map.put("作者信息", user2);
         map.put("粉丝数量", 123);
         return map;
