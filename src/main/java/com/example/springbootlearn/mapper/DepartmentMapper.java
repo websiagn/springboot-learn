@@ -13,9 +13,9 @@ public interface DepartmentMapper {
     public int deleteDeptById(Integer id);
 
     @Options(useGeneratedKeys = true, keyProperty = "id") // 使用自动生成主键，并设置keyProperty，插入时即可返回自增主键
-    @Insert("insert into department(departmentName) values(#{departmentName})")
+    @Insert("insert into department(department_name) values(#{departmentName})")
     public int insertDept(Department department);
 
-    @Update("update department set departmentName=#{departmentName} where id=#{id}")
+    @Update("update department set department_name=#{departmentName} where id=#{id}")
     public int updateDept(Department department);
 }
