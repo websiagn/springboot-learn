@@ -19,7 +19,7 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     # 导入数据表
-    schema:
-      - classpath:sql/department.sql
-      - classpath:sql/employee.sql
-    initialization-mode: always
+#    schema:
+#      - classpath:sql/department.sql
+#      - classpath:sql/employee.sql
+#    initialization-mode: always
