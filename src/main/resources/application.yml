@@ -18,7 +18,11 @@ spring:
     testOnBorrow: false
     testOnReturn: false
     poolPreparedStatements: true
-    # 导入数据表
+mybatis:
+#  指定全局配置文件的位置
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+# 导入数据表
 #    schema:
 #      - classpath:sql/department.sql
 #      - classpath:sql/employee.sql

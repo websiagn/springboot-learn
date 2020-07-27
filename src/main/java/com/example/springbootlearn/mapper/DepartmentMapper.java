@@ -3,7 +3,7 @@ package com.example.springbootlearn.mapper;
 import com.example.springbootlearn.beans.Department;
 import org.apache.ibatis.annotations.*;
 
-@Mapper
+//@Mapper
 public interface DepartmentMapper {
 
     @Select("select * from department where id=#{id}")
